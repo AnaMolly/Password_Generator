@@ -11,14 +11,29 @@ var scArray=["+", "-", "#", "%", "!", "(", ")", "{", "}", "/", "]", "@", "~", "*
 // Write password to the #password input
 function writePassword() {
   var initialAlert = window.alert("Let's generate a password! Please answer the following criteria questions.")
-  var letterAmoutInquiry = window.prompt ("How long do you want your password to be? You can choose bewtween 8-128 characters.")
+  var letterAmoutInquiry =window.prompt ("How long do you want your password to be? You can choose bewtween 8-128 characters.")
+
+  if (letterAmoutInquiry < 8 || letterAmoutInquiry>128){
+    var errorAlert = window.alert ("Invalid entry. Please choose between 8-128 characters.");
+    var secondLetterAmoutInquiry= window.prompt ("How long do you want your password to be? You can choose bewtween 8-128 characters.");
+    if (secondLetterAmoutInquiry < 8 || secondLetterAmoutInquiry>128 ){
+      var secondError = window.alert ("Invalid entry. \nPlease press the 'Generate Password' button again.")
+      return;
+    }
+  }
+  
+  if (letterAmoutInquiry >=8 || letterAmoutInquiry <= 128){
   var lcInquiry = window.confirm("Do you want lowercase letters in your password?")
   var ucInquiry = window.confirm("Do you want uppercase letters in your password?")
   var numInquiry = window.confirm("Do you want numbers in your password?")
   var scInquiry = window.confirm("Do you want special characters in your password?")
+  }
+
+ 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
+  
 
 
 
