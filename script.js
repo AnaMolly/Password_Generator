@@ -4,6 +4,7 @@ var lcArray= [["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 var ucArray=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numArray=["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 var scArray=["+", "-", "#", "%", "!", "(", ")", "{", "}", "/", "]", "@", "~", "*", "?", ":","$", "&","'", "[", ",",";", "=", ">"];
+var passwordArray=[];
 
 
 
@@ -15,8 +16,8 @@ function writePassword() {
 
   if (letterAmoutInquiry < 8 || letterAmoutInquiry>128){
     var errorAlert = window.alert ("Invalid entry. Please choose between 8-128 characters.");
-    var secondLetterAmoutInquiry= window.prompt ("How long do you want your password to be? You can choose bewtween 8-128 characters.");
-    if (secondLetterAmoutInquiry < 8 || secondLetterAmoutInquiry>128 ){
+    letterAmoutInquiry = window.prompt ("How long do you want your password to be? You can choose bewtween 8-128 characters.");
+    if (letterAmoutInquiry < 8 || letterAmoutInquiry>128){
       var secondError = window.alert ("Invalid entry. \nPlease press the 'Generate Password' button again.")
       return;
     }
@@ -29,7 +30,11 @@ function writePassword() {
   var scInquiry = window.confirm("Do you want special characters in your password?")
   }
 
- 
+  if (lcInquiry != true && ucInquiry != true && numInquiry != true && scInquiry != true){
+    window.alert ("You must select one character type.")
+  }
+
+  
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
