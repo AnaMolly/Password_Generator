@@ -4,28 +4,32 @@ var lcArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 var ucArray=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numArray=["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 var scArray=["+", "-", "#", "%", "!", "(", ")", "{", "}", "/", "]", "@", "~", "*", "?", ":","$", "&","'", "[", ",",";", "=", ">"];
-var passwordArray=[];
-var finalPasswordArray=[];
+
 
 
 
 
 // Write password to the #password input
 function writePassword() {
-  
+  var passwordArray=[];
+  var finalPasswordArray=[];
+
+
   var initialAlert = window.alert("Let's generate a password! Please answer the following criteria questions.")
   var letterAmoutInquiry =window.prompt ("How long do you want your password to be? You can choose bewtween 8-128 characters.")
 
-  if (letterAmoutInquiry < 8 || letterAmoutInquiry>128){
+  var passParse = parseInt(letterAmoutInquiry)
+
+  if (isNaN (passParse) || passParse < 8 || passParse>128){
     var errorAlert = window.alert ("Invalid entry. Please choose between 8-128 characters.");
     letterAmoutInquiry = window.prompt ("How long do you want your password to be? You can choose bewtween 8-128 characters.");
-    if (letterAmoutInquiry < 8 || letterAmoutInquiry>128){
+    if (isNaN (passParse) || passParse < 8 || passParse>128){
       var secondError = window.alert ("Invalid entry. \nPlease press the 'Generate Password' button again.")
       return;
     }
   }
   
-  if (letterAmoutInquiry >=8 || letterAmoutInquiry <= 128){
+  if (passParse >=8 || passParse <= 128){
   var lcInquiry = window.confirm("Do you want lowercase letters in your password?")
   var ucInquiry = window.confirm("Do you want uppercase letters in your password?")
   var numInquiry = window.confirm("Do you want numbers in your password?")
@@ -40,7 +44,7 @@ function writePassword() {
     vscInquiry = window.confirm("Do you want special characters in your password?")
   }
   
-  var newLength = letterAmoutInquiry / 2
+  var newLength = passParse / 2
 
   if (lcInquiry==true){
     for(i=0;i<=newLength;i++){
