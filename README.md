@@ -15,8 +15,10 @@ The javascript used for the password generator was made by Analia. The html and 
 
 
 # Screenshot:
-
+![](Screenshot.png)
 
 
 
 # Deployed URL:
+
+https://anamolly.github.io/Password_Generator/
