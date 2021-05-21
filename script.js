@@ -23,6 +23,7 @@ function writePassword() {
   if (isNaN (passParse) || passParse < 8 || passParse>128){
     var errorAlert = window.alert ("Invalid entry. Please choose between 8-128 characters.");
     letterAmoutInquiry = window.prompt ("How long do you want your password to be? You can choose bewtween 8-128 characters.");
+    passParse = parseInt(letterAmoutInquiry)
     if (isNaN (passParse) || passParse < 8 || passParse>128){
       var secondError = window.alert ("Invalid entry. \nPlease press the 'Generate Password' button again.")
       return;
