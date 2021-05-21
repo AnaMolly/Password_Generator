@@ -38,44 +38,42 @@ function writePassword() {
     numInquiry = window.confirm("Do you want numbers in your password?")
     vscInquiry = window.confirm("Do you want special characters in your password?")
   }
+  
+  var newLength = letterAmoutInquiry / 2
 
   if (lcInquiry==true){
-    for(i=0;i<=letterAmoutInquiry-1;i++){
+    for(i=0;i<=newLength;i++){
       passwordArray.push(lcArray[Math.floor(Math.random()*lcArray.length)])
     }
   }
   if (ucInquiry==true){
-    for(i=0;i<=letterAmoutInquiry-1;i++){
+    for(i=0;i<=newLength;i++){
       passwordArray.push(ucArray[Math.floor(Math.random()*ucArray.length)])
     }
   }
   if (numInquiry==true){
-    for(i=0;i<=letterAmoutInquiry-1;i++){
+    for(i=0;i<=newLength;i++){
       passwordArray.push(numArray[Math.floor(Math.random()*numArray.length)])
     }
   }
   if (scInquiry==true){
-    for(i=0;i<=letterAmoutInquiry-1;i++){
+    for(i=0;i<=newLength;i++){
       passwordArray.push(scArray[Math.floor(Math.random()*scArray.length)])
     }
   }
-  console.log(passwordArray);
-    
-     
-  
 
-  //var password = generatePassword();
-  //var passwordText = document.querySelector("#password");
+  for(i=0;i<=letterAmoutInquiry-1;i++){
+    finalPasswordArray.push(passwordArray[Math.floor(Math.random()*passwordArray.length)])
+  }
 
   
-
-
-
-
-
-  //passwordText.value = password;
+  var passwordText = document.querySelector("#password");
+  passwordText.value = finalPasswordArray.join("");
+  
 
 }
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
