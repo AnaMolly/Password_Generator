@@ -12,6 +12,9 @@ var finalPasswordArray=[];
 
 // Write password to the #password input
 function writePassword() {
+  document.getElementById("password").innerHTML = " ";
+
+  
   var initialAlert = window.alert("Let's generate a password! Please answer the following criteria questions.")
   var letterAmoutInquiry =window.prompt ("How long do you want your password to be? You can choose bewtween 8-128 characters.")
 
@@ -69,8 +72,8 @@ function writePassword() {
   
   var passwordText = document.querySelector("#password");
   passwordText.value = finalPasswordArray.join("");
-  
 
+  return;
 }
 
 
