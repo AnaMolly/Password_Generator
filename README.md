@@ -11,10 +11,10 @@ This particular password generator is capable of creating passwords between 8 an
 
 
 # Screenshot:
-![](Screenshot.png)
-![](Screenshot2.png)
-![](Screenshot3.png)
-![](Screenshot4.png)
+![](assets/images/Screenshot.png)
+![](assets/images/Screenshot2.png)
+![](assets/images/Screenshot3.png)
+![](assets/images/Screenshot4.png)
 
 
 
