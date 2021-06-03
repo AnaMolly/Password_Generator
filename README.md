@@ -12,12 +12,14 @@ This particular password generator is capable of creating passwords between 8 an
 
 # Screenshot:
 ![](assets/images/Screenshot.png)
+
+The prompt to include desired character length:
 ![](assets/images/Screenshot2.png)
 
 One of the character options:
 ![](assets/images/Screenshot3.png)
 
-Example of a password with all character options included:
+Example of a generated password with all character options included:
 ![](assets/images/Screenshot4.png)
 
 
