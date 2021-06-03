@@ -13,7 +13,7 @@ This particular password generator is capable of creating passwords between 8 an
 # Screenshot:
 ![](assets/images/Screenshot.png)
 
-The prompt to include desired character length:
+The prompt to include password character length:
 ![](assets/images/Screenshot2.png)
 
 One of the character options:
