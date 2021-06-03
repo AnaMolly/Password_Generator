@@ -1,6 +1,6 @@
 # 03 JavaScript: Password Generator
 
-The javascript used for the password generator was made by Analia. The html and css files as well as the eventlistener, writePassword function and generateBtn in the javascript file were already provided by my bootcamp.
+This password generator was created using HTML, CSS and Javascript. It is capable of generating passwords between 8 and 128 characters. It also presents you with character options (i.e. uppercase, lowercase, numbers and special characters) for your password. All options can be included, but at least one option must be selected in order for the password generator to work. 
 
 # Javascript File:
 - Arrays for uppercase and lowercase letters, numbers and special characters were created. Two empty arrays were also created.
